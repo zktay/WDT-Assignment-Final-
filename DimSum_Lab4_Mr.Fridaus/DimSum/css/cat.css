@@ -1,0 +1,192 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    
+}
+.font{
+    font-family: 'Roboto', sans-serif;
+    color:#635e55;
+}
+
+/* category styling */
+.background{
+    background-color:#efe6d5;
+}
+
+.title-text{
+    width: 30%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    padding-left: 10%;
+}
+
+.header1{
+    display: flex;
+    padding-top: 3%;
+    text-align: center;
+    text-shadow:  #736357;
+    padding: 5%;
+    font-family: bitter;
+}
+
+.title-text i{
+    font-size: 1.6em;
+}
+
+.title-text hr{
+    MARGIN-top: 1%;
+    border: none;
+    border-top: 1px solid black;
+}
+
+
+
+.cat{
+    margin: 2% auto 1% auto;
+    min-width:30%;
+    width: fit-content;
+    background-color: white;
+    font-family: roboto;
+    border-radius: 10px;
+    border: 2px solid #736357;
+}
+
+.cat-header{
+    display: flex;
+    justify-content: space-between;
+    padding: 3% 4% 3% 4%;
+    align-items: center;
+    background-color: white;
+    border-radius: 10px;
+    
+}
+
+.cat-header .cat-title,.edittext h1{
+    color: #635e55;
+    user-select: none;
+
+}
+
+.cat-title{
+    font-family: raleway;
+    font-weight: bold;
+}
+
+.cat-header{
+    font-size: 1em;
+    font-family: rubik;
+}
+.dropdown:hover{
+    cursor: pointer;
+}
+.dropup:hover{
+    cursor: pointer;
+}
+
+.section1{
+    display: none;
+}
+
+.edittext{
+    background-color: #f2efe9;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    padding: 1.5% 4% 1.5% 4%;
+    border-top: 1px solid #736357;
+
+}
+
+.edittext:last-child{
+    border-radius: 0 0 10px 10px;
+}
+
+.display-mode{
+    font-size: 0.8em;
+    user-select: none;
+    /* display: none; */
+}
+
+.edit-mode{
+    display: none;
+    flex-direction: column;
+}
+
+.edit{
+    cursor: pointer;
+    user-select: none;
+    border: none;
+    background: none;
+}
+.save{
+    display: none;
+    cursor: pointer;
+    user-select: none;
+    border: none;
+    background: none;
+}
+
+/* Add new item button styling */
+.add-item-box{
+    border-top: 1px solid #736357;
+    display: flex;
+    flex-direction: column;
+    background-color: #f2efe9;
+}
+
+.add-item-field{
+    display: none;
+    flex-direction: column;
+}
+
+.add-item-field input{
+    width: 60%;
+    margin: 2% auto 0% auto;
+}
+
+.add-item-field label{
+    text-align: center;
+    margin: 2% auto 0% auto;
+}
+
+.add-item{
+    width: 40%;
+    height: 25px;
+    margin: 5% auto 2% auto;
+    border: none;
+    font-family: roboto;
+    font-weight: 600;
+    background-color:#f2efe9;
+    cursor: pointer;
+}
+
+.save-item{
+    display: none;
+    width: 40%;
+    height: 25px;
+    margin: 5% auto 2% auto;
+    border: none;
+    font-family: roboto;
+    font-weight: 600;
+    background-color:#f2efe9;
+    user-select: none;
+}
+/* addcat */
+.addcat{
+    display: flex;
+    justify-content: space-between;
+    padding: 3% 4% 3% 4%;
+    align-items: center;
+    background-color: white;
+    font-family: rubik;
+    font:bold;
+    border-radius: 10px;
+    font-size: 2em;
+    user-select: none;
+}
+.add{
+    background-color: #f2efe9;
+    border:none;
+    cursor: pointer;
+}

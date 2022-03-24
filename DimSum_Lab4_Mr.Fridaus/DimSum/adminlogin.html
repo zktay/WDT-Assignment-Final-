@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html class="bgcolor font" >
+<head><link rel="shortcut icon" type="emoji" href="Title.png"/> 
+    <link href="css/adminlogin.css" rel="stylesheet" type="text/css" />
+    <title>Admin Login</title>
+</head>
+<body>
+    <br>
+    <br>
+    <br>
+    <div class="blur-box">
+    <center>Admin Login</center>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <form method = "POST" action = "php/adminlogin.php">
+    <table class = "TableCenter" cellpadding="0" cellspacing="5">
+        <tr>
+            <th colspan = "2" align = "left">Admin Email:</th>
+        </tr>
+        <tr>
+            <td colspan = "2"><input class = "FTextbox" type = "email" name = "Admin_Email" required = "required"></td>
+        </tr>
+        <tr>
+            <th colspan = "2" align = "left">Password:</th>  
+        </tr>
+        <tr>
+            <td colspan = "2"><input class = "FTextbox" type = "password" name = "Admin_Password" required = "required"></td>
+        </tr>
+            </td>
+        </tr>
+        <tr><td><br></td></tr>
+        <tr>
+            <td>
+            <input type="checkbox" name="remember" id="remember">
+		    <label for="remember-me">Remember me</label>
+            </td>
+            <td align = "right">
+                <a onclick="fg_pass();" href="">Forget Password</a>
+            </td>
+        </tr>
+        <tr><td><br></td></tr>
+        <td colspan = "2" align = "center"><input type = "submit" value = "Login" style="width :338px; border-radius: 4px;
+            border-style: solid; border-width: thin;"></td>
+        <tr>
+            <td>
+                <br><br>
+            </td>
+        </tr>
+    </table>
+    </form>
+    </div>
+    
+    <script>
+        function fg_pass(){
+            alert('Please Contact the IT department.')
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html class="bgcolor font" >
+<head><link rel="shortcut icon" type="emoji" href="../Title.png"/> 
+    <link href="../css/payment.css" rel="stylesheet" type="text/css" />
+    <title>Payment</title>
+</head>
+    <body>
+    <br>
+    <br>
+    <br>
+    <div class="blur-box">
+    <center>Please Do Not Refresh or Close this Tab</center>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class = "payment">
+        <div class="payment-box">
+            <form method = "POST" action = "../php/payment.php">
+            <table cellpadding="0" cellspacing ="5" width = "400px" class="TableRight">
+
+                <tr>
+                    <th colspan = "2" align = "left">Name On Delivery:</th>
+                </tr>
+                <tr>
+                    <td colspan = "2"><input class = "FTextbox" type = "text" name = "NameOnDelivery" required></td>
+                </tr>
+                <tr>
+                    <th colspan = "2" align="left">Phone Number:</th>
+                </tr>
+                <tr>
+                    <td colspan = "2">
+                        <input type = "radio" value = "Default Number" name = "select_number"  id = "default_num" required = "required" onclick = "number(); p_handleClick();">Default Number
+                        <input type = "radio" value = "Custom Number" name = "select_number" id = "custom_num" required = "required" onclick = "number();">Custom Number
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan = "2"><input class = "FTextbox" type = "tel" name = "Phone" id = "phone" required = "required" placeholder="0123456789" pattern="[0-9]{10,12}"></td>
+                </tr>
+
+                    <th colspan = "2" align = "left">Delivery Address:</th>
+                </tr>
+                <tr>
+                    <td colspan = "2">
+                        <input type = "radio" value = "Default Address" name = "select_address" id = "default_add" required = "required" onclick = "address(); d_handleClick();">Default Address
+                        <input type = "radio" value = "Custom Address" name = "select_address" id = "custom_add" required = "required" onclick = "address();">Custom Address
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan = "2"><input class = "FTextbox" type = "text" name = "Address_1" id = "Address_1" required = "required" placeholder = "Address line 1:"></td>
+                </tr>
+                <tr>
+                    <td colspan = "2"><input class = "FTextbox" type = "text" name = "Address_2" id = "Address_2" required = "required" placeholder = "Address line 2:"></td>
+                </tr>
+                <tr>
+                    <td><input class = "FTextbox"type = "postal" name = "zipcode" id = "zipcode" required = "required" placeholder = "ZIP Code" pattern="[0-9]{5}"></td> 
+                    <td align="center">
+                        <select name = "State" required = "required" value = "State:" id = "State" class = "selectbox">
+                            <option value ="Default">Please Select</option>
+                            <option value="Johor">Johor</option>
+                            <option value="Kedah">Kedah</option>
+                            <option value="Kelantan">Kelantan</option>
+                            <option value="Kuala Lumpur">Kuala Lumpur</option>
+                            <option value="Labuan">Labuan</option>
+                            <option value="Melaka">Melaka</option>
+                            <option value="Negeri Sembilan">Negeri Sembilan</option>
+                            <option value="Pahang">Pahang</option>
+                            <option value="Penang">Penang</option>
+                            <option value="Perak">Perak</option>
+                            <option value="Perlis">Perlis</option>
+                            <option value="Putrajaya">Putrajaya</option>
+                            <option value="Sabah">Sabah</option>
+                            <option value="Sarawak">Sarawak</option>
+                            <option value="Selangor">Selangor</option>
+                            <option value="Terengganu">Terengganu</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+            </form>
+        </div>
+        <div class="payment-box">
+            <form method="POST">
+            <table cellpadding="0" cellspacing ="5" width = "400px">
+                <tr>
+                    <th colspan = "2" align = "left">Name On Card:</th>
+                </tr>
+                <tr>
+                    <td colspan = "2"><input class = "FTextbox" type = "text" name = "NameOnCard" required = "required" pattern="^((?:[A-Za-z]+ ?){1,3})$"></td>
+                </tr>
+                <tr>
+                    <th colspan = "2" align="left">Card Information:</th>
+                </tr>
+                <tr>
+                    <td colspan = "2"><input class = "FTextbox" type = "tel" name = "CardInfo" required = "required" placeholder="Card Number:" pattern="[0-9]{14,16}"></td>
+                </tr>
+                <tr>
+                    <td><input class = "FTextbox" type = "date" name = "CardExpire" required = "required" placeholder="Expire Date:"></td>
+                    <td><input class = "FTextbox" type = "text" name = "CVC" required = "required" placeholder="CVC:" pattern="[0-9]{3}"></td>
+                </tr>
+                <tr>
+                    <th colspan = "2" align = "left">Billing Address:</th>
+                </tr>
+                <tr>
+                    <td colspan = "2">
+                        <input type = "radio" value = "Default Bill" name = "select_bill" id = "default_bill" required = "required" onclick = "bill_address(); b_handleClick();">Bill to Delivery Address
+                        <input type = "radio" value = "Custom Bill" name = "select_bill" id = "custom_bill" required = "required" onclick = "bill_address();">Custom Billing Address
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan = "2"><input class = "FTextbox" type = "text" name = "b_Address_1" id = "bill_1" required = "required" placeholder = "Address line 1:"></td>
+                </tr>
+                <tr>
+                    <td colspan = "2"><input class = "FTextbox" type = "text" name = "b_Address_2" id = "bill_2" required = "required" placeholder = "Address line 2:"></td>
+                </tr>
+                <tr>
+                    <td><input class = "FTextbox"type = "postal" name = "b_zipcode" id = "bill_zip" required = "required" placeholder = "ZIP Code:"></td> 
+                    <td align="center">
+                        <select name = "b_State" required = "required" value = "State:" id = "bill_state" class = "selectbox">
+                            <option value="Default">Please Select</option>
+                            <option value="Johor">Johor</option>
+                            <option value="Kedah">Kedah</option>
+                            <option value="Kelantan">Kelantan</option>
+                            <option value="Kuala Lumpur">Kuala Lumpur</option>
+                            <option value="Labuan">Labuan</option>
+                            <option value="Melaka">Melaka</option>
+                            <option value="Negeri Sembilan">Negeri Sembilan</option>
+                            <option value="Pahang">Pahang</option>
+                            <option value="Penang">Penang</option>
+                            <option value="Perak">Perak</option>
+                            <option value="Perlis">Perlis</option>
+                            <option value="Putrajaya">Putrajaya</option>
+                            <option value="Sabah">Sabah</option>
+                            <option value="Sarawak">Sarawak</option>
+                            <option value="Selangor">Selangor</option>
+                            <option value="Terengganu">Terengganu</option>
+                        </select>
+                    </td>
+               </tr>
+            </table>
+            </form>
+        </div>      
+    </div>
+    <br>
+
+    <div class = "BTNmid">
+        <input style = "width :90px; margin-right: 5px;" type = "button" value = "Back" onclick="history.back();">
+        <input style = "width :90px; margin-left: 5px;" type = "submit" value = "Pay Now" onclick = "payment_done();">
+    </div> 
+    </div>
+    <script src="../js/payment.js"></script>
+</body>
+</html>
